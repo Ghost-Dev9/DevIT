@@ -82,7 +82,7 @@ check_wget_curl() {
 	if [ -e '/usr/bin/wget' ]; then
 		wget -q https://raw.githubusercontent.com/Ghost-Dev9/DevIT/release/install/devit-install.sh
 		if [ "$?" -eq '0' ]; then
-			bash hst-install-$type.sh $*
+			bash devit-install-$type.sh $*
 			exit
 		else
 			echo "Error: hst-install-$type.sh download failed."
@@ -95,7 +95,7 @@ check_wget_curl() {
 	if [ -e '/usr/bin/curl' ]; then
 		curl -s -O https://raw.githubusercontent.com/Ghost-Dev9/DevIT/release/install/devit-install.sh
 		if [ "$?" -eq '0' ]; then
-			bash hst-install-$type.sh $*
+			bash devit-install-$type.sh $*
 			exit
 		else
 			echo "Error: hst-install-$type.sh download failed."
